@@ -11,11 +11,23 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "laravel/framework": "^8.76"
+        "laravel/framework": "^8.76",
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^5.0|^6.20",
+        "guzzlehttp/guzzle": "^7.4"
+
     },
     "autoload": {
         "psr-4": {
             "TNM\\PCRF\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TNM\\PCRF\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -27,7 +39,6 @@
     },
     "require": {
         "tnmdev/utils": "@dev",
-        "php": "^7.4||^8.0",
         "tnmdev/msisdn-helpers": "^1.2"
     }
 }

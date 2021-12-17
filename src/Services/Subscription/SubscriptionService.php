@@ -9,7 +9,7 @@ class SubscriptionService extends PCRFService implements ISubscriptionService
 
     protected function getRequestStubPath(): string
     {
-        return __DIR__.'/../../stubs/subscribe.xml';
+        return 'stubs/subscribe.xml';
     }
 
     protected function getResponseNamespace(): string

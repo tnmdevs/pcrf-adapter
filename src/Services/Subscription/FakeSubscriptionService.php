@@ -9,7 +9,7 @@ class FakeSubscriptionService extends PCRFFakeService implements ISubscriptionSe
 
     protected function getRequestStubPath(): string
     {
-        return __DIR__ . '../../stubs/subscribe.xml';
+        return 'stubs/subscribe.xml';
     }
 
     protected function getResponseNamespace(): string
