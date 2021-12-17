@@ -1,0 +1,15 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <SOAP-ENV:Body>
+        <subscribeServiceResponse xmlns="rm:soap">
+            <result xmlns="">
+                <resultCode>0</resultCode>
+                <paras>
+                    <key>errorDescription</key>
+                    <value>Operation succeeded</value>
+                </paras>
+            </result>
+        </subscribeServiceResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
