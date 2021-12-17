@@ -16,7 +16,7 @@ abstract class PCRFBaseService
 
     protected function getContentTag(): string
     {
-        return '';
+        return 'result';
     }
 
     protected function getRequestBody(array $attributes): string

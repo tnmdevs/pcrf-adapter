@@ -39,6 +39,8 @@
     },
     "require": {
         "tnmdev/utils": "@dev",
-        "tnmdev/msisdn-helpers": "^1.2"
+        "tnmdev/msisdn-helpers": "^1.2",
+        "ext-json": "*",
+        "ext-simplexml": "*"
     }
 }
