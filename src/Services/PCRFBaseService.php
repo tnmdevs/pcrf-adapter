@@ -21,7 +21,7 @@ abstract class PCRFBaseService
 
     protected function getRequestBody(array $attributes): string
     {
-        $stub = file_get_contents(package_path($this->getRequestStubPath()));
+        $stub = file_get_contents(pcrf_package_path($this->getRequestStubPath()));
 
         foreach ($attributes as $placeholder => $value)
             $stub = str_replace(sprintf('{{%s}}', $placeholder), $value, $stub);
