@@ -17,7 +17,7 @@ abstract class PCRFService extends PCRFBaseService
     {
         $attributes = array_merge($attributes, ['trans_id' => (new TransactionIDFactory())->make()]);
         $requestBody = $this->getRequestBody($attributes);
-        Event::dispatch(new PCRFRequestEvent($attributes, class_basename(static::class)));
+        Event::dispatch(new PCRFRequestEvent($attributes, class_basename(static::class), $requestBody));
         try {
 
             $response = Http::withBody($requestBody, 'text/xml')

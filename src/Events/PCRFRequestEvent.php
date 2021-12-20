@@ -14,16 +14,18 @@ class PCRFRequestEvent
 
     public array $attributes;
     public string $service;
+    public string $body;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(array $attributes, string $service)
+    public function __construct(array $attributes, string $service, string $body = '')
     {
         $this->attributes = $attributes;
         $this->service = $service;
+        $this->body = $body;
     }
 
     /**
