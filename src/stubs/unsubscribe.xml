@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:rm="rm:soap">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <rm:unSubscribeService>
+            <inPara>
+                <subscriber>
+                    <attribute>
+                        <key>usrIdentifier</key>
+                        <value>{{msisdn}}</value> </attribute>
+                </subscriber>
+                <subscribedService>
+                    <attribute>
+                        <key>srvName</key>
+                        <value>{{bundle_id}}</value>
+                    </attribute>
+                    <attribute>
+                        <key>TransactionID</key>
+                        <value>{{trans_id}}</value> </attribute>
+                </subscribedService>
+            </inPara>
+        </rm:unSubscribeService>
+    </soapenv:Body>
+</soapenv:Envelope>
