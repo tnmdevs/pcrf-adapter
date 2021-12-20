@@ -89,7 +89,6 @@ class PCRFResponseTest extends TestCase
 
     private function makePCRFRequest()
     {
-        \Config::set('pcrf.timeout', 10);
         \Http::fake(['*' => \Http::response(file_get_contents(__DIR__ . '/response.xml'))]);
 
         $this->response = (new SubscriptionClient('0888800900', 123456, now()->addMonth()))->query();

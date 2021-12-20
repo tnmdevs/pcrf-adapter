@@ -15,7 +15,12 @@ abstract class PCRFService extends PCRFBaseService
 {
     public function query(array $attributes, string $responseClass = PCRFResponse::class): PCRFResponse
     {
-        $attributes = array_merge($attributes, ['trans_id' => (new TransactionIDFactory())->make()]);
+        $attributes = array_merge($attributes, [
+            'trans_id' => (new TransactionIDFactory(
+                config('pcrf.trans_id.length'),
+                config('pcrf.trans_id.prefix')
+            ))->make()
+        ]);
         $requestBody = $this->getRequestBody($attributes);
         Event::dispatch(new PCRFRequestEvent($attributes, class_basename(static::class), $requestBody));
         try {
