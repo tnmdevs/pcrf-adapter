@@ -3,6 +3,8 @@
 namespace TNM\PCRF\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use TNM\PCRF\Services\SubscriberServices\ISubscriberServicesService;
+use TNM\PCRF\Services\SubscriberServices\SubscriberServicesService;
 use TNM\PCRF\Services\Subscription\ISubscriptionService;
 use TNM\PCRF\Services\Subscription\SubscriptionService;
 use TNM\PCRF\Services\Unsubscription\IUnsubscriptionService;
@@ -21,5 +23,6 @@ class PCRFServiceProvider extends ServiceProvider
     {
         $this->app->bind(ISubscriptionService::class, SubscriptionService::class);
         $this->app->bind(IUnsubscriptionService::class, UnsubscriptionService::class);
+        $this->app->bind(ISubscriberServicesService::class, SubscriberServicesService::class);
     }
 }
