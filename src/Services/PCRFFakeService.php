@@ -34,8 +34,7 @@ abstract class PCRFFakeService extends PCRFBaseService
     {
         $attributes = array_merge($attributes, ['trans_id' => (new TransactionIDFactory())->make()]);
         $requestBody = $this->getRequestBody($attributes);
-        Event::dispatch(new PCRFRequestEvent(['payload' => $attributes, 'body' => $requestBody], class_basename
-        (static::class)));
+        Event::dispatch(new PCRFRequestEvent($attributes, class_basename(static::class), $requestBody));
 
         return new $responseClass(
             $this->getResponseNamespace(),
