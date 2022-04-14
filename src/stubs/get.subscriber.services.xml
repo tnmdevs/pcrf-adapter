@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rm="rm:soap">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <rm:getSubscriberAllService>
+            <inPara>
+                <subscriber>
+                    <!--  Identifier of the subscriber  -->
+                    <attribute>
+                        <key>usrIdentifier</key>
+                        <value>{{msisdn}}</value>
+                    </attribute>
+                </subscriber>
+                <subscribedService>
+                    <attribute>
+                        <key>timeZone</key>
+                        <value>18</value>
+                    </attribute>
+                    <attribute>
+                        <key>DSTFlag</key>
+                        <value>0</value>
+                    </attribute>
+                </subscribedService>
+            </inPara>
+        </rm:getSubscriberAllService>
+    </soapenv:Body>
+</soapenv:Envelope>
